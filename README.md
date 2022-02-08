@@ -1,6 +1,6 @@
 ## 🚀 Reddit ReactJS
 
-Desafio do Reddit - Winnin.
+Desafio Reddit - Winnin.
 
 **Demo**: https://challeng-reddit.vercel.app/
 
