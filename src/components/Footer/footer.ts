@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const FooterContainer = styled.header`
-  max-width: 1400px;
+  max-width: 1160px;
   margin: 0.5rem auto;
   
   background-color: #fff;

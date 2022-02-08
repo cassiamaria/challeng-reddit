@@ -1,4 +1,4 @@
-import { PostContainer, ContentLeft, ContentRight } from "./posts";
+import { PostContainer, ContentLeft, ContentRight, Title } from "./posts";
 
 interface PostProps {
   author: string;
@@ -12,7 +12,9 @@ export function Posts({ author, created_utc, title, url}: PostProps){
     <PostContainer>
       <ContentLeft></ContentLeft>
       <ContentRight>
-        <h2>{title}</h2>
+        <Title>
+          <h2>{title}</h2>
+        </Title>
         <p>{created_utc} <span>{author}</span> </p>
         <a
           href={url}

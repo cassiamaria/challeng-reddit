@@ -1,10 +1,10 @@
 
-export default {
-  title: 'lightColor',
+export const themeLight = {
+  title: 'light',
 
   colors: {
     header: '#6324C6',
-    yellow: '#FFB800',
+    title: '#FFB800',
     line: '#c6cbd3',
     background: '#fff',
     text: '#000'

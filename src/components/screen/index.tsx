@@ -6,11 +6,11 @@ import { Posts } from "../Posts";
 import { Footer } from "../Footer";
 
 import { api } from "../../services/api";
+import { toast } from "react-hot-toast";
 
 import GlobalStyle  from "../../styles/globalStyle";
 import Loading from "../Loading";
 import { HomeContainer, HandlePostContainer } from "./home";
-import { toast } from "react-hot-toast";
 
 const hot = "hot";
 const news = "new";
@@ -37,7 +37,6 @@ export function Home(){
 
   const callEndpoint = useCallback(async() => {
     try {
-      // setPost([]);
       setIsLoading(true);
       const {data: response} = await api.get(page);
 
@@ -100,55 +99,55 @@ export function Home(){
   }
 
   return (
-      <>
-        <GlobalStyle />
-        <Header />
-        <HomeContainer>
-          <Button 
-            buttonName="Hot"
-            isActive={page === hot}
-            onClick={() => setPage('hot')}
-          />
-          <Button 
-            buttonName="New"
-            isActive={page === news}
-            onClick={() => setPage('new')}
-          />
-          <Button 
-            buttonName="Rising"
-            isActive={page === rising}
-            onClick={() => setPage('rising')}
-          />
-        </HomeContainer>
-
-        {isLoading ? (
-          <Loading 
-            color="#6324C6" 
-            type={'bars'} 
-            height={'5%'} 
-            width={'5%'}
-          />
-        ) : (
-          <>
-            {post.map((response: any) => {
-              const datas = convertTime(response.data.created_utc);
-              return(
-                <HandlePostContainer key={response.data.id}>
-                  <Posts
-                    author={response.data.author}
-                    created_utc={datas}
-                    title={response.data.title}
-                    url={response.data.url}  
-                  />
-                </HandlePostContainer>
-              );
-          })}
-          </>
-        )}
-        <Footer 
-          onClick={handleMorePosts}
-          nextPageLoading={nextPageLoading}
+    <>
+      <GlobalStyle />
+      <Header/>
+      <HomeContainer>
+        <Button 
+          buttonName="Hot"
+          isActive={page === hot ? true : false}
+          onClick={() => setPage('hot')}
         />
-      </>
+        <Button 
+          buttonName="New"
+          isActive={page === news ? true : false}
+          onClick={() => setPage('new')}
+        />
+        <Button 
+          buttonName="Rising"
+          isActive={page === rising ? true : false}
+          onClick={() => setPage('rising')}
+        />
+      </HomeContainer>
+
+      {isLoading ? (
+        <Loading 
+          color="#6324C6" 
+          type={'bars'} 
+          height={'5%'} 
+          width={'5%'}
+        />
+      ) : (
+        <>
+          {post.map((response: any) => {
+            const datas = convertTime(response.data.created_utc);
+            return(
+              <HandlePostContainer key={response.data.id}>
+                <Posts
+                  author={response.data.author}
+                  created_utc={datas}
+                  title={response.data.title}
+                  url={response.data.url}  
+                />
+              </HandlePostContainer>
+            );
+        })}
+        </>
+      )}
+      <Footer 
+        onClick={handleMorePosts}
+        nextPageLoading={nextPageLoading}
+      />
+    </>
   );
 }  

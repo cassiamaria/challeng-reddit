@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const PostContainer = styled.div`
-  max-width: 1400px;
+  max-width: 1160px;
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -48,3 +48,15 @@ export const ContentRight = styled.div`
     }
   }
 `
+
+export const Title = styled.div`
+  h2 {
+    display: inline-block;
+    height: 25px;
+    overflow: hidden;
+    max-width: 1040px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+`;

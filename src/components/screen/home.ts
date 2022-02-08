@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const HomeContainer = styled.div`
-  max-width: 1400px;
+  max-width: 1160px;
   
   margin: 0 auto;
   display: flex;
@@ -11,9 +11,10 @@ export const HomeContainer = styled.div`
 `;
 
 export const HandlePostContainer = styled.div`
-  max-width: 1400px;
+  max-width: 1160px;
   
   margin: 0 auto;
   display: flex;
+  justify-content: center;
   flex-direction: column;
 `;
