@@ -16,7 +16,7 @@ export const ButtonPage = styled.button<ButtonProps>`
   font-weight: 600;
   text-align: center;
 
-  background-color: ${(isActive) => isActive ? "#6324C6" :"#A7B0BE" };
+  background-color: ${({ isActive }) => isActive ? "#6324C6" : "#A7B0BE"};
   color: #FFF;
 
   transition: filter 0.2s;
