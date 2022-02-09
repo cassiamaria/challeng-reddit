@@ -6,7 +6,7 @@ export const Content = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0 1rem;
 `;
 
 export const ButtonsContainer = styled.div`
