@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const FooterContainer = styled.header`
+export const FooterContainer = styled.footer`
   max-width: 1160px;
   margin: 0.5rem auto;
   
@@ -13,6 +13,10 @@ export const FooterContainer = styled.header`
   bottom: 0px;
   -webkit-box-pack: end;
   justify-content: center;
+
+  @media (min-width: 425px) {
+    padding: 0 1rem;
+  }
 
   button {
     width: 100%;

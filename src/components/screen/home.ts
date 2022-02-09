@@ -1,20 +1,18 @@
 import styled from "styled-components";
 
-export const HomeContainer = styled.div`
+export const Content = styled.div`
+  width: 100vw;
   max-width: 1160px;
-  
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 1rem;
+`;
+
+export const ButtonsContainer = styled.div`
   margin: 0 auto;
   display: flex;
   justify-content: center;
   gap: 1rem;
-  padding: 1.25rem 0;
-`;
-
-export const HandlePostContainer = styled.div`
-  max-width: 1160px;
-  
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  padding: 1.25rem 1rem;
 `;

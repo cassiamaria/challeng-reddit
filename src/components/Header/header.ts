@@ -10,12 +10,8 @@ export const HeaderContainer = styled.header`
 
   background-color: #6324C6;
   color: #FFF;
-`;
 
-export const HeaderLeftContent = styled.header`
   span {
     color: #FFB800;
   }
-  /* dark */
-  /* color: #8850e4; */
 `;
