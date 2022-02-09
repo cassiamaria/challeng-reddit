@@ -134,6 +134,7 @@ export function Home(){
               return(
                 <div key={response.data.id}>
                   <Posts
+                    link_flair_text={response.data.link_flair_text}
                     author={response.data.author}
                     created_utc={datas}
                     title={response.data.title}

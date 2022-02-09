@@ -16,7 +16,21 @@ export const ContentLeft = styled.div`
   width: 77px;
   height: 77px;
   border-radius: 0.5rem;
-  background-color: #A7B0BE;
+  background-color: #6324C6;
+
+  p {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 2px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+  }
 
   @media (max-width: 960px) {
     display: none;
