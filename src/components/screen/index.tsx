@@ -91,6 +91,9 @@ export function Home(){
 
       setNextPage(response.data.after);
       setPost((post) => [...post, ...response.data.children]);
+      setTimeout(() => {
+        window.scrollTo(0, document.body.scrollHeight);
+      }, 100);
     } catch (error) {
       toast.error(`This didn't work!`);
     } finally {
