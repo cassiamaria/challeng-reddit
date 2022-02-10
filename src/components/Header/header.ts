@@ -3,15 +3,30 @@ import styled from "styled-components";
 export const HeaderContainer = styled.header`
   width: 100%;
   height: 94px;
+  padding: 0 30px;
 
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 
-  background-color: #6324C6;
+  background-color: ${ props => props.theme.colors.header };
   color: #FFF;
 
-  span {
-    color: #FFB800;
+  h1 {
+    flex: 4;
+    display: flex;
+    justify-content: center;
   }
+
+  .text-yellow {
+    color: ${ props => props.theme.colors.titleHeader };;
+  }
+`;
+
+export const ButtonThemeContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25px;
+  gap: 8px;
 `;

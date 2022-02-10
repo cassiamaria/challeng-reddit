@@ -2,15 +2,17 @@ import 'styled-components';
 
 declare module 'styled-components' {
   export interface DefaultTheme {
-    title: string;
+    title?: string;
     
     colors: {
-      header: string;
-      title: string;
-      line: string;
+      header?: string;
+      title?: string;
+      titleHeader?: string;
+      line?: string;
+      purple?: string;
 
-      background: string;
-      text: string;
+      background?: string;
+      text?: string;
     }
   }
 }

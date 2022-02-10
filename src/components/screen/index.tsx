@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 
 import { Button } from "../Button";
-import { Header } from "../Header";
 import { Posts } from "../Posts";
 import { Footer } from "../Footer";
 
@@ -104,7 +103,6 @@ export function Home(){
   return (
     <>
       <GlobalStyle />
-      <Header/>
       <ButtonsContainer>
         <Button 
           buttonName="Hot"

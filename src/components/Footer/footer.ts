@@ -4,7 +4,7 @@ export const FooterContainer = styled.footer`
   max-width: 1160px;
   margin: 0.5rem auto;
   
-  background-color: #fff;
+  background-color: ${ props => props.theme.colors.background };
 
   height: 70px;
   display: flex;
@@ -23,7 +23,7 @@ export const FooterContainer = styled.footer`
     height: 48px;
     border-radius: 8px;
 
-    background-color: #6324C6;
+    background-color: ${ props => props.theme.colors.purple };
     color: #FFF;
     font-size: 20px;
     font-weight: 600;
