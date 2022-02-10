@@ -15,10 +15,7 @@ export function Header({toggleTheme}: Props) {
     <HeaderContainer>
       <h1>REACT<span className="text-yellow">JS</span></h1>
       <ButtonThemeContent>
-        <span>
-          {title === 'dark' ? dark : light}
-          
-        </span>
+        <span>{title === 'dark' ? dark : light}</span>
         <Switch 
           onChange={toggleTheme}
           checked={title === 'dark'}
