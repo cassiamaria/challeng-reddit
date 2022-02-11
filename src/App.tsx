@@ -1,13 +1,13 @@
-
+import React from 'react';
 import GlobalStyle from './styles/globalStyle';
 
-import { Home } from './components/screen/index';
 import { Toaster } from 'react-hot-toast';
 import { ThemeProvider } from 'styled-components';
 import { useState } from 'react';
 import { darkTheme } from './styles/themes/dark';
 import { lightTheme } from './styles/themes/light';
-import { Header } from './components/Header';
+import { Header } from './components/Header/index';
+import { Home } from './components/screen/index';
 
 function App() {
   const [theme, setTheme] = useState(lightTheme);
@@ -17,14 +17,14 @@ function App() {
   };
 
   return (    
-    <div className="App">
-      <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme}>
+      <div className="App">
         <GlobalStyle />
         <Header toggleTheme={toggleTheme} />
         <Home />
         <Toaster position="top-right" />
-       </ThemeProvider>
-     </div>    
+      </div>    
+    </ThemeProvider>
   );
 }
 

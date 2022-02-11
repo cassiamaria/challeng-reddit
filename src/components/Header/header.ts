@@ -27,7 +27,6 @@ export const ButtonThemeContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 18px;
-  font-weight: 700;
+  font-size: 25px;
   gap: 8px;
 `;

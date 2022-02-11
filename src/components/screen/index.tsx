@@ -1,8 +1,8 @@
 import { useCallback, useEffect, useState } from "react";
 
 import { Button } from "../Button";
-import { Posts } from "../Posts";
 import { Footer } from "../Footer";
+import { Posts } from "../Posts";
 
 import { api } from "../../services/api";
 import { toast } from "react-hot-toast";
@@ -15,16 +15,17 @@ const hot = "hot";
 const news = "new";
 const rising = "rising";
 
-export interface InfosPostProps {
+interface InfosPostProps {
   id: string;
   author: string;
   created_utc: number;
   title: string;
   url: string;
+  link_flair_text?: string;
 }
 
 interface Post {
-  data: Array<InfosPostProps>;
+  data: InfosPostProps[];
 }
 
 export function Home(){
@@ -72,8 +73,10 @@ export function Home(){
       hours: `Enviado há ${hours}h por `,
     };
 
-    if(days > 0) handleMessage.days;
-    
+    if(days > 0) {
+      return handleMessage.days;
+    }
+
     return handleMessage.hours;
   };
 
@@ -132,7 +135,7 @@ export function Home(){
           <>
             {post.map((response: any) => {
               const datas = convertTime(response.data.created_utc);
-              return(
+              return (
                 <div key={response.data.id}>
                   <Posts
                     link_flair_text={response.data.link_flair_text}
@@ -143,7 +146,7 @@ export function Home(){
                   />
                 </div>
               );
-          })}
+            })}
           </>
         )}
       </Content>
@@ -153,4 +156,4 @@ export function Home(){
       />
     </>
   );
-}  
+}

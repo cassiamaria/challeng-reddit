@@ -8,7 +8,6 @@ Desafio Reddit - Winnin.
 
 Algumas das tecnologias usadas foram:
 
-- ViteJS
 - ReactJS
 - Sytled-Components
 - TypeScript
@@ -30,7 +29,7 @@ Follow the steps below:
 $ npm i 
 
 # Start the project
-$ npm run dev
+$ npm start
 ```
 
 The app will be available for access on your browser at http://localhost:3000
@@ -40,5 +39,3 @@ The app will be available for access on your browser at http://localhost:3000
 This project is licensed under the MIT License. See the [LICENSE](LICENSE.md) file for details.
 
 ---
-
-
