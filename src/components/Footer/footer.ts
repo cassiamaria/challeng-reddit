@@ -22,7 +22,7 @@ export const FooterContainer = styled.footer`
     height: 48px;
     border-radius: 8px;
 
-    background-color: ${ props => props.theme.colors.purple };
+    background-color: ${ (theme) => theme.theme.colors.purple };
     color: #FFF;
     font-size: 20px;
     font-weight: 600;

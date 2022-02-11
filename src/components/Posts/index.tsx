@@ -3,8 +3,8 @@ import { PostContainer, ContentLeft, ContentRight } from "./posts";
 interface PostProps {
   author: string;
   created_utc?: string;
-  title: string;
-  url: string;
+  title?: string;
+  url?: string;
   link_flair_text?: string;
 }
 

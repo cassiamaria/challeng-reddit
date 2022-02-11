@@ -52,15 +52,15 @@ export const ContentRight = styled.div`
   h2 {
     font-size: 1.25rem;
     font-weight: 600;
-    color: ${ theme => (theme).theme.colors.title };
+    color: ${ (theme) => theme.theme.colors.title };
   }
 
   p {
     padding-bottom: 0.65rem;
-    color: ${ theme => (theme).theme.colors.title };
+    color: ${ (theme) => theme.theme.colors.title };
 
     span {
-      color: ${ theme => (theme).theme.colors.purple };;
+      color: ${ (theme) => theme.theme.colors.purple };;
       font-weight: 700;
     }
   }

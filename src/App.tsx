@@ -16,15 +16,15 @@ function App() {
     setTheme(theme.title === 'light' ? darkTheme : lightTheme);
   };
 
-  return (
-    <ThemeProvider theme={theme}>
-      <div className="App">
+  return (    
+    <div className="App">
+      <ThemeProvider theme={theme}>
         <GlobalStyle />
         <Header toggleTheme={toggleTheme} />
         <Home />
         <Toaster position="top-right" />
-      </div>
-    </ThemeProvider>
+       </ThemeProvider>
+     </div>    
   );
 }
 
