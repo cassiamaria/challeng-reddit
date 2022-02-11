@@ -11,7 +11,7 @@ const GlobalStyle = createGlobalStyle`
 
   body, input, button, textarea {
     font: 400 1rem 'Mulish', sans-serif;
-    background: ${ props => props.theme.colors.background };
+    background: ${ (theme) => theme.theme.colors.background };
   }
 
   a, button {

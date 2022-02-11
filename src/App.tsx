@@ -10,7 +10,6 @@ import { lightTheme } from './styles/themes/light';
 import { Header } from './components/Header';
 
 function App() {
-
   const [theme, setTheme] = useState(lightTheme);
 
   const toggleTheme = () => {
@@ -19,12 +18,12 @@ function App() {
 
   return (
     <ThemeProvider theme={theme}>
-    <div className="App">
-      <GlobalStyle />
-      <Header toggleTheme={toggleTheme} />
-      <Home />
-      <Toaster position="top-right" />
-    </div>
+      <div className="App">
+        <GlobalStyle />
+        <Header toggleTheme={toggleTheme} />
+        <Home />
+        <Toaster position="top-right" />
+      </div>
     </ThemeProvider>
   );
 }

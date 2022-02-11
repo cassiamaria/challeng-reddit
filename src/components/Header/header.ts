@@ -9,7 +9,7 @@ export const HeaderContainer = styled.header`
   justify-content: space-between;
   align-items: center;
 
-  background-color: ${ props => props.theme.colors.header };
+  background-color: ${ (theme) => theme.theme.colors.header };
   color: #FFF;
 
   h1 {
@@ -19,7 +19,7 @@ export const HeaderContainer = styled.header`
   }
 
   .text-yellow {
-    color: ${ props => props.theme.colors.titleHeader };;
+    color: ${ (theme) => theme.theme.colors.titleHeader };;
   }
 `;
 

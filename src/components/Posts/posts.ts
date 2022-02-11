@@ -5,7 +5,7 @@ export const PostContainer = styled.div`
   align-items: center;
   gap: 1rem;
   padding: 0.6rem 0 0.6rem 0.6rem;
-  border-top: 1px solid ${ props => props.theme.colors.line };
+  border-top: 1px solid ${ (theme) => theme.theme.colors.line };
 
   & + PostContainer:hover {
     border-bottom: 0;
@@ -16,7 +16,7 @@ export const ContentLeft = styled.div`
   width: 77px;
   height: 77px;
   border-radius: 0.5rem;
-  background-color: ${ props => props.theme.colors.purple };;
+  background-color: ${ (theme) => theme.theme.colors.purple };;
 
   p {
     width: inherit;
@@ -52,15 +52,15 @@ export const ContentRight = styled.div`
   h2 {
     font-size: 1.25rem;
     font-weight: 600;
-    color: ${ props => props.theme.colors.title };
+    color: ${ theme => (theme).theme.colors.title };
   }
 
   p {
     padding-bottom: 0.65rem;
-    color: ${ props => props.theme.colors.title };
+    color: ${ theme => (theme).theme.colors.title };
 
     span {
-      color: ${ props => props.theme.colors.purple };;
+      color: ${ theme => (theme).theme.colors.purple };;
       font-weight: 700;
     }
   }

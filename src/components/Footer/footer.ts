@@ -4,8 +4,7 @@ export const FooterContainer = styled.footer`
   max-width: 1160px;
   margin: 0.5rem auto;
   
-  background-color: ${ props => props.theme.colors.background };
-
+  background-color: ${ (theme) => theme.theme.colors.background };
   height: 70px;
   display: flex;
   flex-direction: column;
